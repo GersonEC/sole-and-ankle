@@ -80,7 +80,7 @@ const Flag = styled.h4`
   top: 6px;
 `
 const Image = styled.img`
-  width: 340px;
+  width: 100%;
 `;
 
 const Row = styled.div`
