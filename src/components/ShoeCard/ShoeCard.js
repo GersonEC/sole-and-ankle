@@ -36,6 +36,7 @@ const ShoeCard = ({
       <Wrapper>
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
+          <Flag variant={variant}>{salePrice ? `Sale` : `Just Released!`}</Flag>
         </ImageWrapper>
         <Spacer size={12} />
         <Row>
@@ -62,11 +63,22 @@ const Wrapper = styled.article`
   flex-direction: column;
 `;
 
+
 const ImageWrapper = styled.div`
   position: relative;
 
 `;
 
+const Flag = styled.h4`
+  background-color: ${props => props.variant === "on-sale" ? COLORS.primary : COLORS.secondary};
+  color: white;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  right: -8px;
+  top: 6px;
+`
 const Image = styled.img`
   width: 340px;
 `;
